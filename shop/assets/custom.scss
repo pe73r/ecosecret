@@ -1,15 +1,21 @@
 
 /*================ #FONTS  ===================================*/
 @font-face {
-    font-family: 'FONT-1';
-    src: url('https://cdn.shopify.com/s/files/1/0040/5517/1107/files/Dandeleon_Vintage_Demo.ttf?418');
+    font-family: 'Ernest';
+    src: url('https://cdn.shopify.com/s/files/1/0040/5517/1107/files/Ernest_Emily_1.otf?1191');
     font-style: normal;
   }
   @font-face {
-    font-family: 'FONT-2';
-    src: url('https://cdn.shopify.com/s/files/1/0040/5517/1107/files/IntroHeadR-Base.otf?418');
+    font-family: 'Dear-type';
+    src: url('https://cdn.shopify.com/s/files/1/0040/5517/1107/files/DearType_-_MomentsSans-Regular_1.otf?1191');
     font-style: italic;
   }
+  @font-face {
+    font-family: 'Dear-type-bold';
+    src: url('https://cdn.shopify.com/s/files/1/0040/5517/1107/files/DearType_-_MomentsSansBold-Regular_1.otf?1191');
+    font-style: italic;
+  }
+
 
 
 
@@ -28,9 +34,11 @@
 
 /*================ #PASSWORD PAGE =============================*/
 
+html{
+  height: 100%;
+}
 .password__container{
-  width: 100vw;
-  height: 100vh;
+ max-height: 90%;
   
 }
 
@@ -39,18 +47,18 @@
   display: flex;
   justify-content: center;
   position: relative;
-  padding-top:30px;
-
+  padding-top:10px;
 }
 
 .password__logo{
-  max-height: 130px;
+  max-height: 140px;
 }
 
 .password__drops{
   position: absolute;
   top: 25px;
   left: 30px;
+  width: 130px;
 }
 
 .password__main{
@@ -60,113 +68,167 @@
 	position: relative;
 
     .password__card{
-		width: 40%;
-		
+		width: 40%; 
+	  }
+    .password__card-image{
+      width: 100%;
+      max-width: 450px;
 
-	}
-	.password__content{
+    }
+
+	 .password__content{
 		width: 60%;
+    margin-top: 30px;
 
-		.password__title-box{
-			display: flex;
-			width: 90%;
-			margin: 0 auto;
-		    justify-content: center;
-
+  		.password__title-box{
+  			display: flex;
+  			width: 90%;
+  			margin: 0 auto;
+  		  justify-content: center;
 
                 h1{
-                	font-family: 'FONT-1';
-                	font-size: 5em;
+                	font-family: 'Ernest';
+                	font-size: 6em;
                 	color: #f32735;
                 	text-align: center;
                 	letter-spacing: 3px;
+                  margin: 0;
                 }
 
-				.hearts1{
-                 
+				.hearts1,
+        .hearts2{ 
+            width: 30px;        
 				}
-				.hearts2{
-                 
-				}
-		}
-
-	}
+        .hearts2{
+           margin-left: 5px;
+        }
+		  }
+    }
+    .password__text{
+      margin-top: 30px;
+    }
 
     p{
-    	font-family: 'FONT-2';
-    	font-size: 1.7em;
+    	font-family: 'Dear-type-bold';
+    	font-size: 2em;
     	text-transform: uppercase;
     	color: #193868;
     	width: 75%;
-        margin: 30px auto;
+      margin: 0 auto;
+      }
+
+   .password__form{
+      max-width: 330px;
     }
-	.password__newsletter{
-       width: 40%;
-       margin: 0 auto;
+
+	 .password__newsletter{
+       margin: 50px auto;
        
-	}
-	.password__newsletter-input{
+	  }
+	 .password__newsletter-input{
       border: 1px solid #193868;
-      border-radius: 15px 0px 0px 15px;
-	}
-	.password__newsletter-submit{
-	  background-color: #193868;
-	  border-radius: 0px 15px 15px 0px;
-	  cursor: pointer;
-	}
+      border-width: 1px 0 1px 1px;
+      border-radius: 10px 0px 0px 10px;
+	  }
+
+	 .password__newsletter-submit{
+  	  background-color: #fff;
+  	  border-radius: 0px 10px 10px 0px;
+      border-width: 1px 1px 1px 0;
+      border-color: #193868;
+  	  cursor: pointer;
+      font-family: 'Dear-type';
+      text-transform: uppercase;
+      &:hover{
+        background-color: #fff;
+      }
+	 }
+   .submit__text{
+      
+      padding: 7px;
+      border-radius: 3px;
+      background-color: #193868;
+   }
 }
+
+
 ::placeholder { 
-       font-family: 'FONT-2';
+       font-family: 'Dear-type-bold';
       text-transform: uppercase;
       color: #193868;
   
  }
 
  .password__footer{
- 	position: relative;
+ 	  position: relative;
 
- 	.footer__title{
- 		font-family: 'FONT-2';
-    	font-size: 2em;
-    	text-transform: uppercase;
-    	color: #193868;
-    	position: relative;
- 	}
- 	.footer__image-corner{
- 		position: absolute;
- 		right: 30px;
- 		bottom: 10px;
- 	}
- 	.image-mouth{
- 		width: 150px;
- 		height: 150px;
- 	}
+       	.footer__title{
+       		  font-family: 'Dear-type';
+          	font-size: 1.5em;
+          	text-transform: uppercase;
+          	color: #193868;
+          	position: relative;
+       	}
+       	.footer__image-corner{
+       		position: absolute;
+       		right: 30px;
+       		bottom: 10px;
+       	}
+       	.image-mouth{
+       		width: 140px;
+       		
+       	}
+
+      .pass_insta,
+      .pass_facebook{
+         width: 40px;
+         height: 40px;
+      }
+
  }
 
 @media screen and (max-width: 1279px) {
   .password__main{
 
   	.password__card{
-		width: 50%;
-		margin: 0 auto;
+		   width: 40%;
+		   margin: 0 auto;
+    }
+	  .password__content{
+	  	 width: 60%;
 
-	}
-	.password__content{
-		width: 50%;
-	}
+	   }
 		
     .password__newsletter{
        width: 80%;
-       
-	}
-	.image-mouth{
-	 	display: none;
-     }
+    }
+	  .image-mouth{
+	   	display: none;
+    }
   }
   
 }
+.password__main .password__content .password__title-box h1{
+  font-size: 5.5em;
+}
+
+@media screen and (max-width: 1105px) {
+  .password__main .password__content .password__title-box h1{
+    font-size: 4.5em;
+   }
+}
+
+@media screen and (max-width: 952px) {
+  .password__main .password__content .password__title-box h1{
+    font-size: 3.7em;
+   }
+}
 
  @media screen and (max-width: 800px) {
+
+  .password__main .password__content .password__title-box h1{
+    font-size: 4.5em;
+   }
 
  	.password__header{
 	  padding: 30px;
@@ -179,7 +241,7 @@
      	display: none;
      }
 
-    .password__main{
+  .password__main{
 	  align-items: columns;
 
 			.password__card,
@@ -187,28 +249,31 @@
 				width: 100%;
 			}
 			p{
-    	       width: 80%;
-             }
+    	 width: 80%;
+      }
 
-            .password__newsletter{
-                width: 80%;
-	        }
-    }
+      .password__newsletter{
+       width: 80%;
+	   }
+  }
 
  }
   @media screen and (max-width: 400px) {
     .password__main{
 	  
-            .password__newsletter{
-                width: 90%;
-                margin: auto;
+        .password__newsletter{
+            width: 90%;
+            margin: auto;
 	        }
     }
+
     .password__main .password__content .password__title-box h1 {
-    	font-size: 2.5em;
+    	  font-size: 5em;
     }
+
     .password__main p {
-    	font-size: 1.2em;
+    	font-size: 2em;
+      margin-bottom: 10px;
     }
 
   }
