@@ -1,0 +1,214 @@
+
+/*================ #FONTS  ===================================*/
+@font-face {
+    font-family: 'FONT-1';
+    src: url('https://cdn.shopify.com/s/files/1/0040/5517/1107/files/Dandeleon_Vintage_Demo.ttf?418');
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'FONT-2';
+    src: url('https://cdn.shopify.com/s/files/1/0040/5517/1107/files/IntroHeadR-Base.otf?418');
+    font-style: italic;
+  }
+
+
+
+/*================ #GENERAL ===================================*/
+
+
+.align-center {
+	text-align: center;
+}
+.align-left {
+	text-align: left;
+}
+.align-right {
+	text-align: right;
+}
+
+/*================ #PASSWORD PAGE =============================*/
+
+.password__container{
+  width: 100vw;
+  height: 100vh;
+  
+}
+
+.password__header{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-top:30px;
+
+}
+
+.password__logo{
+  max-height: 130px;
+}
+
+.password__drops{
+  position: absolute;
+  top: 25px;
+  left: 30px;
+}
+
+.password__main{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	position: relative;
+
+    .password__card{
+		width: 40%;
+		
+
+	}
+	.password__content{
+		width: 60%;
+
+		.password__title-box{
+			display: flex;
+			width: 90%;
+			margin: 0 auto;
+		    justify-content: center;
+
+
+                h1{
+                	font-family: 'FONT-1';
+                	font-size: 5em;
+                	color: #f32735;
+                	text-align: center;
+                	letter-spacing: 3px;
+                }
+
+				.hearts1{
+                 
+				}
+				.hearts2{
+                 
+				}
+		}
+
+	}
+
+    p{
+    	font-family: 'FONT-2';
+    	font-size: 1.7em;
+    	text-transform: uppercase;
+    	color: #193868;
+    	width: 75%;
+        margin: 30px auto;
+    }
+	.password__newsletter{
+       width: 40%;
+       margin: 0 auto;
+       
+	}
+	.password__newsletter-input{
+      border: 1px solid #193868;
+      border-radius: 15px 0px 0px 15px;
+	}
+	.password__newsletter-submit{
+	  background-color: #193868;
+	  border-radius: 0px 15px 15px 0px;
+	  cursor: pointer;
+	}
+}
+::placeholder { 
+       font-family: 'FONT-2';
+      text-transform: uppercase;
+      color: #193868;
+  
+ }
+
+ .password__footer{
+ 	position: relative;
+
+ 	.footer__title{
+ 		font-family: 'FONT-2';
+    	font-size: 2em;
+    	text-transform: uppercase;
+    	color: #193868;
+    	position: relative;
+ 	}
+ 	.footer__image-corner{
+ 		position: absolute;
+ 		right: 30px;
+ 		bottom: 10px;
+ 	}
+ 	.image-mouth{
+ 		width: 150px;
+ 		height: 150px;
+ 	}
+ }
+
+@media screen and (max-width: 1279px) {
+  .password__main{
+
+  	.password__card{
+		width: 50%;
+		margin: 0 auto;
+
+	}
+	.password__content{
+		width: 50%;
+	}
+		
+    .password__newsletter{
+       width: 80%;
+       
+	}
+	.image-mouth{
+	 	display: none;
+     }
+  }
+  
+}
+
+ @media screen and (max-width: 800px) {
+
+ 	.password__header{
+	  padding: 30px;
+
+    }
+
+     .password__drops,
+     .hearts1,
+     .hearts2{
+     	display: none;
+     }
+
+    .password__main{
+	  align-items: columns;
+
+			.password__card,
+			.password__content{
+				width: 100%;
+			}
+			p{
+    	       width: 80%;
+             }
+
+            .password__newsletter{
+                width: 80%;
+	        }
+    }
+
+ }
+  @media screen and (max-width: 400px) {
+    .password__main{
+	  
+            .password__newsletter{
+                width: 90%;
+                margin: auto;
+	        }
+    }
+    .password__main .password__content .password__title-box h1 {
+    	font-size: 2.5em;
+    }
+    .password__main p {
+    	font-size: 1.2em;
+    }
+
+  }
