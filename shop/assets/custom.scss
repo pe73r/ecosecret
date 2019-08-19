@@ -324,6 +324,9 @@ $retina:           "screen and (-webkit-min-device-pixel-ratio: 2), screen and (
     $black:black;
     $grey:grey;
     $lightgrey:lightgrey;
+    $lightred: #f46156;
+    $pink: #ffdce4;
+
 
   /*================ custom font sizes =============================*/
 
@@ -437,4 +440,33 @@ $retina:           "screen and (-webkit-min-device-pixel-ratio: 2), screen and (
       .home-picto {
            width: 25px;
         }
+    }
+
+/*================  home-products =============================*/
+
+    .home-products-container{
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .home-products__header {
+        width: max-content;
+        margin: 50px auto;
+    }
+
+    .home-products__title{
+        text-align: center;
+        background-image: linear-gradient(to top, $pink 50%, $white 50%);
+        padding: 5px;
+    }
+
+    .home-products__image{
+      max-width: 150px;
+      margin: 20px auto;
+    }
+
+    @media #{$thumb}{
+          .home-products__header {
+              width: 70%;
+          }
     }

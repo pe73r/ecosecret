@@ -15,21 +15,21 @@
                       {% include 'image' with img : section.settings.image_left-mobile, class: 'full-width mobile-only' %}
                        <div class="home-image__box home-image__banner-left position-absolute-bottom">
                            <div class="home-picto__left">
-                               <img src="https://cdn.shopify.com/s/files/1/0040/5517/1107/files/france.png?1645" alt="picto-france" class="home-picto">
+                               <img src="{{ section.settings.picto_left }}" alt="picto-france" class="home-picto">
                            </div>
                            <div class="home-content__left">
                                <h2 class="medium margin-cero home-image__text">{{ section.settings.text_left }}<span>></span></h2>
                            </div>
                       </div>
                   </a>
-              </div>
+              </div>  
               <div class="1/2 grid__cell relative">
                  <a href="{{ section.settings.url_left }}">
                     {% include 'image' with img : section.settings.image_right, class: 'full-width desktop-only' %}
                     {% include 'image' with img : section.settings.image_right-mobile, class: 'full-width mobile-only' %}
                       <div class="home-image__box home-image__banner-right position-absolute-bottom">
                           <div class="home-picto__right">
-                            <img src="https://cdn.shopify.com/s/files/1/0040/5517/1107/files/korea.png?1645" alt="picto-korea" class="home-picto">
+                            <img src="{{ section.settings.picto_right }}" alt="picto-korea" class="home-picto">
                           </div>
                           <div class="home-content__right">
                               <h2 class="medium margin-cero home-image__text">{{ section.settings.text_right }}<span>></span></h2>
