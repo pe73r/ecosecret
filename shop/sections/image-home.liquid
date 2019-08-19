@@ -1,0 +1,82 @@
+
+{% include 'image-home' %}
+
+{% schema %}
+{
+  "name": "Image home",
+  "settings": [
+     {
+       "type": "image_picker",
+       "id": "image_left",
+       "label": "Image home left"
+     },
+     {
+       "type": "image_picker",
+       "id": "image_left-mobile",
+       "label": "image in mobile"
+     },
+     {
+       "type": "image_picker",
+       "id": "picto_left",
+       "label": "Picto left"
+     },
+     {
+       "type": "text",
+       "id": "text_left",
+       "label": "tetx left",
+       "info": "introduce <br> to insert a line break"
+     },
+     {
+       "type": "color",
+       "id": "color_left",
+       "label": "color banner left"
+     },
+     {
+       "type": "url",
+       "id": "url_left",
+       "label": "url banner left"
+     },
+     {
+       "type": "image_picker",
+       "id": "image_right",
+       "label": "Image home right"
+     },
+     {
+       "type": "image_picker",
+       "id": "image_right-mobile",
+       "label": "image in mobile"
+     },
+     {
+       "type": "image_picker",
+       "id": "picto_right",
+       "label": "Picto right"
+     },
+     {
+       "type": "text",
+       "id": "text_right",
+       "label": "tetx right",
+       "info": "introduce <br> to insert a line break"
+     },
+     {
+       "type": "color",
+       "id": "color_right",
+       "label": "color banner right"
+     },
+     {
+       "type": "url",
+       "id": "url_right",
+       "label": "url banner right"
+     }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Homepage image section"
+      },
+      "category": {
+        "en": "Homepage"
+      }
+    }
+  ]
+}
+{% endschema %}
