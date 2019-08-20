@@ -1,12 +1,12 @@
 <style>
-{% for block in section.blocks %}
-    #block--{{ block.id }} .home-products__button{
-          padding: 10px 60px;
-          background-color: #fff;
-          border: 1px solid {{ block.settings.color }};
-          color: {{ block.settings.color }};
-     }
- {% endfor %}
+  {% for block in section.blocks %}
+      #block--{{ block.id }} .home-products__button{
+            padding: 10px 60px;
+            background-color: #fff;
+            border: 1px solid {{ block.settings.color }};
+            color: {{ block.settings.color }};
+       }
+   {% endfor %}
 </style>
 <section id="section--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="home-products">
      <div class="home-products-container">
@@ -28,4 +28,3 @@
          </div>
      </div>
 </section>
- 

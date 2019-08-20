@@ -1,5 +1,5 @@
 
-/*================ #PASSWORD PAGE =============================*/
+/*================ #landing PAGE =============================*/
 
 html{
   height: 100%;
@@ -326,77 +326,96 @@ $retina:           "screen and (-webkit-min-device-pixel-ratio: 2), screen and (
     $lightgrey:lightgrey;
     $lightred: #f46156;
     $pink: #ffdce4;
+    $blue: #1b3063;
 
 
-  /*================ custom font sizes =============================*/
+  /*================ custom font sizes ======================*/
 
     $font-size-title: 18px;
+    $font-size-title-big: 1.7em;
     $font-size-title-medium: 13px;
-    $font-size-title-small: 7px;
+    $font-size-title-small: 8px;
+
+  /*================ spacing =============================*/
+
+    $section-spacing-xl: 70px;
+    $section-spacing-big: 50px;
+    $section-spacing-medium: 30px;
+    $section-spacing-small: 20px;
+
+    .section-margin-top{
+       margin-top: $section-spacing-xl;
+    }
+
+    .section-margin-bottom{
+       margin-bottom: $section-spacing-big;
+    }
+
 
   /*================ Utilities =============================*/
 
+      .align-center {
+      	text-align: center;
+      }
+      .align-left {
+      	text-align: left;
+      }
+      .align-right {
+      	text-align: right;
+      }
 
-  .align-center {
-  	text-align: center;
-  }
-  .align-left {
-  	text-align: left;
-  }
-  .align-right {
-  	text-align: right;
-  }
+      .full-width{
+        width: 100%;
+      }
 
-  .full-width{
-    width: 100%;
-  }
+      .position-absolute-center{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
-  .position-absolute-center{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+      .position-absolute-bottom{
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, -5%);
+      }
 
-  .position-absolute-bottom{
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%, -5%);
-  }
-
-  .desktop-only{
-    display: block;
-  }
-
-  .mobile-only{
-    display: none;
-  }
-
- .margin-cero{
-    margin: 0;
- }
-  .relative{
-    position: relative;
-  }
-
-
-  @media #{$pocket}{
       .desktop-only{
-        display: none;
+        display: block;
       }
 
       .mobile-only{
-        display: block;
+        display: none;
       }
-  }
+
+     .margin-cero{
+        margin: 0;
+     }
+      .relative{
+        position: relative;
+      }
+
+
+      @media #{$pocket}{
+          .desktop-only{
+            display: none;
+          }
+
+          .mobile-only{
+            display: block;
+          }
+      }
+
 /*========================================================*/
 /*================ home page =============================*/
 /*========================================================*/
 
-/*================ section image-home =============================*/
+/*================  image-home =============================*/
 
-    .home-container{
+    .home-image-container{
+      max-width: 1600px;
       width: 95%;
       margin: 0 auto;
     }
@@ -470,3 +489,37 @@ $retina:           "screen and (-webkit-min-device-pixel-ratio: 2), screen and (
               width: 70%;
           }
     }
+
+/*================  home-advantages =============================*/
+
+
+  .home-advantages__section{
+    background-color: $blue;
+  }
+
+  .home-advantages-container{
+       text-align: center;
+       padding: 60px 0;
+       max-width: 1300px;
+       margin: 0 auto;
+    }
+
+   .home-advantages__title{
+     color: $white;
+     font-size: $font-size-title-big;
+     text-transform: inherit;
+     padding: 20px;
+   }
+
+   .home-advantages__image{
+     max-width: 170px;
+     margin: 20px auto;
+   }
+
+   .home-advantages__content{
+     max-width: 350px;
+      margin: 0 auto;
+      p{
+        color: $white;
+      }
+   }

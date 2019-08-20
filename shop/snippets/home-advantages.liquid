@@ -1,0 +1,15 @@
+<section id="section--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="home-advantages" class="home-advantages__section section-margin-top">
+     <div class="home-advantages-container">
+         <h2 class="medium home-advantages__title">{{ section.settings.title }}</h2>
+         <div class="grid">
+              {% for block in section.blocks %}
+                  <div class="1/3--lap-and-up grid__cell align-center">
+                        <div id="block--{{ block.id }}" data-block-id="{{ block.id }}">
+                           {% include 'image' with img : block.settings.image, class: 'full-width home-advantages__image' %}
+                           <div class="medium home-advantages__content">{{ block.settings.content }}</div>
+                       </div>
+                  </div>
+              {% endfor %}
+         </div>
+     </div>
+</section>

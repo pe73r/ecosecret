@@ -1,0 +1,44 @@
+
+{% include 'home-advantages' %}
+
+{% schema %}
+{
+  "name": "Home advantages",
+  "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "title",
+        "default": "title"
+      }
+  ],
+  "blocks": [
+    {
+      "type": "advantage-block",
+      "name": "Advantage block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "label"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Homepage advantages section"
+      },
+      "category": {
+        "en": "Homepage"
+      }
+    }
+  ]
+}
+{% endschema %}
