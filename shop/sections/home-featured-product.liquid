@@ -1,0 +1,72 @@
+
+{% include 'home-featured-product' %}
+
+{% schema %}
+{
+  "name": "Home featured product",
+  "settings": [
+     {
+       "type": "image_picker",
+       "id": "product",
+       "label": "Prodcut image"
+     },
+     {
+       "type": "image_picker",
+       "id": "bubble",
+       "label": "bubble image"
+     },
+     {
+       "type": "text",
+       "id": "subtitle",
+       "label": "subtitle"
+     },
+     {
+       "type": "text",
+       "id": "title",
+       "label": "title"
+     },
+     {
+       "type": "richtext",
+       "id": "description",
+       "label": "description"
+     },
+     {
+       "type": "text",
+       "id": "price",
+       "label": "price"
+     },
+     {
+       "type": "text",
+       "id": "button_text",
+       "label": "button text",
+       "default": "JE LE VEUX!"
+     },
+     {
+        "type":      "select",
+        "id":        "color",
+        "label":     "Button color",
+        "options": [
+          {
+            "value": "#193063",
+            "label": "blue"
+          },
+          {
+            "value": "#f46156",
+            "label": "red"
+          }
+        ],
+        "default":   "#f46156"
+     }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Homepage featured product"
+      },
+      "category": {
+        "en": "Homepage"
+      }
+    }
+  ]
+}
+{% endschema %}

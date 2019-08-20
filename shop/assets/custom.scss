@@ -292,30 +292,29 @@ html{
  @import url('https://fonts.googleapis.com/css?family=Maven+Pro&display=swap');
 
 
-/*================ Quicksand medium  ===================================*/
+  /*================ Quicksand medium  ===================================*/
 
-@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 
-@mixin medium {
-  font-family: 'Quicksand', sans-serif;
-}
-.medium{
-  @include medium;
-}
+    @mixin medium {
+      font-family: 'Quicksand', sans-serif;
+    }
+    .medium{
+      @include medium;
+    }
 
-/*================ Media queries avalanche =============================*/
+  /*================ Media queries avalanche =============================*/
 
-$thumb:            "screen and (max-width: 499px)";
-$handheld:         "screen and (min-width: 500px) and (max-width: 800px)";
-$handheld-and-up:  "screen and (min-width: 500px)";
-$pocket:           "screen and (max-width: 800px)";
-$lap:              "screen and (min-width: 801px) and (max-width: 1024px)";
-$lap-and-up:       "screen and (min-width: 801px)";
-$portable:         "screen and (max-width: 1024px)";
-$desk:             "screen and (min-width: 1025px)";
-$widescreen:       "screen and (min-width: 1160px)";
-$retina:           "screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx)";
-
+    $thumb:            "screen and (max-width: 499px)";
+    $handheld:         "screen and (min-width: 500px) and (max-width: 800px)";
+    $handheld-and-up:  "screen and (min-width: 500px)";
+    $pocket:           "screen and (max-width: 800px)";
+    $lap:              "screen and (min-width: 801px) and (max-width: 1024px)";
+    $lap-and-up:       "screen and (min-width: 801px)";
+    $portable:         "screen and (max-width: 1024px)";
+    $desk:             "screen and (min-width: 1025px)";
+    $widescreen:       "screen and (min-width: 1160px)";
+    $retina:           "screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx)";
 
 
   /*================ Colors =============================*/
@@ -327,6 +326,7 @@ $retina:           "screen and (-webkit-min-device-pixel-ratio: 2), screen and (
     $lightred: #f46156;
     $pink: #ffdce4;
     $blue: #1b3063;
+    $red: red;
 
 
   /*================ custom font sizes ======================*/
@@ -397,6 +397,9 @@ $retina:           "screen and (-webkit-min-device-pixel-ratio: 2), screen and (
         position: relative;
       }
 
+      .absolute{
+        position: absolute;
+      }
 
       @media #{$pocket}{
           .desktop-only{
@@ -480,7 +483,7 @@ $retina:           "screen and (-webkit-min-device-pixel-ratio: 2), screen and (
     }
 
     .home-products__image{
-      max-width: 150px;
+      max-width: 160px;
       margin: 20px auto;
     }
 
@@ -523,3 +526,74 @@ $retina:           "screen and (-webkit-min-device-pixel-ratio: 2), screen and (
         color: $white;
       }
    }
+
+   /*================  featured-product =============================*/
+
+    .featured-product-container{
+       width: 90%;
+       max-width: 1300px;
+       margin: 0 auto;
+       padding-top: 62px;
+    }
+
+   .featured-product-lines{
+       position: absolute;
+       top: 100px;
+       z-index: -1;
+   }
+
+   .featured-product-line{
+       width: 100%;
+       height: 5px;
+       margin-bottom: 10px;
+       background-color: $blue;
+   }
+   .product-line-red{
+       background-color: $red;
+   }
+
+   .featured-product_image{
+     width: 250px;
+     margin: 0 auto;
+   }
+
+   .featured-product__left{
+     text-align: center !important;
+   }
+
+   .featured-product__subtitle{
+     margin-bottom: 5px;
+   }
+   .featured-product__title{
+     font-size: $font-size-title-big;
+     text-transform: inherit;
+   }
+
+   .featured-product__description{
+     max-width: 500px;
+   }
+
+    .featured-product__price{
+      font-size: $font-size-title-big;
+      font-weight: bold;
+      margin: 15px auto;
+    }
+    .featured-product__flex{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .featured-product__bubble{
+        text-align: right;
+        width: 330px;
+    }
+
+    @media #{$pocket}{
+          .featured-product__content{
+               margin-top: 30px;
+               text-align: center;
+          }
+          .featured-product__description{
+             text-align: justify;
+          }
+      }
