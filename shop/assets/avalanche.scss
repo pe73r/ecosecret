@@ -14,6 +14,12 @@ $gutter-xlarge:100px;
     padding-left: $gutter-small;
   }
 }
+.grid--large {
+  margin-left: $gutter-xlarge;
+  .grid__cell {
+    padding-left: $gutter-large;
+  }
+}
 
 .grid--xl {
   margin-left: $gutter-xlarge;
@@ -29,6 +35,20 @@ $gutter-xlarge:100px;
         padding-left: $gutter-small;
       }
     }
+
+    .grid--xl {
+      margin-left: $gutter;
+      .grid__cell {
+        padding-left: $gutter;
+      }
+    }
+    .grid--large {
+      margin-left: $gutter;
+      .grid__cell {
+        padding-left: $gutter;
+      }
+    }
+
 }
 
 

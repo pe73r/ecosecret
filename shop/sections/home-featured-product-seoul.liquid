@@ -1,19 +1,20 @@
 
-{% include 'home-featured-product' %}
+{% include 'home-featured-product-seoul' %}
 
 {% schema %}
 {
-  "name": "Featured product Paris",
+  "name": "Featured product seoul",
+  "class": "section-margin-large",
   "settings": [
+      {
+        "type": "image_picker",
+        "id": "image_background",
+        "label": "background image"
+      },
      {
        "type": "image_picker",
        "id": "product",
-       "label": "Prodcut image"
-     },
-     {
-       "type": "image_picker",
-       "id": "bubble",
-       "label": "bubble image"
+       "label": "Product image"
      },
      {
        "type": "text",
@@ -61,7 +62,7 @@
   "presets": [
     {
       "name": {
-        "en": "Featured product Paris"
+        "en": "Featured product Seoul"
       },
       "category": {
         "en": "Homepage"

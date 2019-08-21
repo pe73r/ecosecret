@@ -332,25 +332,49 @@ html{
   /*================ custom font sizes ======================*/
 
     $font-size-title: 18px;
-    $font-size-title-big: 1.7em;
+    $font-size-title-large: 1.7em;
     $font-size-title-medium: 13px;
     $font-size-title-small: 8px;
 
   /*================ spacing =============================*/
 
-    $section-spacing-xl: 70px;
-    $section-spacing-big: 50px;
+    $section-spacing-xlarge: 70px;
+    $section-spacing-large: 50px;
     $section-spacing-medium: 30px;
     $section-spacing-small: 20px;
 
-    .section-margin-top{
-       margin-top: $section-spacing-xl;
+    $section-spacing-mobile-xlarge: 50px;
+    $section-spacing-mobile-large: 30px;
+    $section-spacing-mobile-medium: 20px;
+    $section-spacing-mobile-small: 10px;
+
+    .section-margin-xl{
+       margin: $section-spacing-xlarge auto;
+    }
+    .section-margin-large{
+       margin: $section-spacing-large auto;
+    }
+    .section-margin-medium{
+       margin: $section-spacing-medium auto;
+    }
+    .section-margin-small{
+       margin: $section-spacing-small auto;
     }
 
-    .section-margin-bottom{
-       margin-bottom: $section-spacing-big;
-    }
-
+    @media #{$pocket}{
+        .section-margin-xl{
+           margin: $section-spacing-mobile-xlarge auto;
+        }
+        .section-margin-large{
+           margin: $section-spacing-mobile-large auto;
+        }
+        .section-margin-medium{
+           margin: $section-spacing-mobile-medium auto;
+        }
+        .section-margin-small{
+           margin: $section-spacing-mobile-small auto;
+        }
+     }
 
   /*================ Utilities =============================*/
 
@@ -509,7 +533,7 @@ html{
 
    .home-advantages__title{
      color: $white;
-     font-size: $font-size-title-big;
+     font-size: $font-size-title-large;
      text-transform: inherit;
      padding: 20px;
    }
@@ -527,7 +551,7 @@ html{
       }
    }
 
-   /*================  featured-product =============================*/
+   /*================  featured-product-paris =============================*/
 
     .featured-product-container{
        width: 90%;
@@ -565,16 +589,16 @@ html{
      margin-bottom: 5px;
    }
    .featured-product__title{
-     font-size: $font-size-title-big;
+     font-size: $font-size-title-large;
      text-transform: inherit;
    }
 
    .featured-product__description{
-     max-width: 500px;
+      max-width: 400px;
    }
 
     .featured-product__price{
-      font-size: $font-size-title-big;
+      font-size: $font-size-title-large;
       font-weight: bold;
       margin: 15px auto;
     }
@@ -597,3 +621,31 @@ html{
              text-align: justify;
           }
       }
+
+/*================  featured-product-seoul =============================*/
+
+    .featured-product-seoul-container{
+      width: 90%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding-top: 62px;
+      min-height: 700px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .featured-product_image-seoul{
+        width: 400px;
+        margin-top: -40px;
+    }
+
+   @media #{$pocket}{
+       .featured-product_image-seoul{
+           width: 300px;
+           margin-top: 30px;
+       }
+       .featured-product_image-box-seoul{
+         text-align: center;
+       }
+   }
