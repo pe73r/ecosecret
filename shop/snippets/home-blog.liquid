@@ -1,0 +1,17 @@
+<section id="section--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="home-blog">
+       <div class="home-blog-container">
+             <div class="grid grid--large grid--center grid--middle">
+                  <div class="1/2--lap-and-up grid__cell">
+                      {% include 'image' with img : section.settings.image, class: 'full-width' %}
+                  </div>
+                  <div class="1/2--lap-and-up grid__cell">
+                      <div class="home-blog__content">
+                          <h3 class="dear-type home-blog__subtitle">{{ section.settings.subtitle }}</h3>
+                          <h2 class="medium home-blog__title">{{ section.settings.title }}</h2>
+                          <div class="home-blog__text">{{ section.settings.content }}</div>
+                          <button class="primary__button" type="button" name="button">{{ section.settings.button_text }}</button>
+                      </div>
+                  </div>
+             </div>
+       </div>
+</section>

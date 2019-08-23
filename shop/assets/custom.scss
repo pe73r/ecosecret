@@ -346,8 +346,8 @@ html{
     $section-spacing-medium: 30px;
     $section-spacing-small: 20px;
 
-    $section-spacing-mobile-xlarge: 50px;
-    $section-spacing-mobile-large: 30px;
+    $section-spacing-mobile-xlarge: 80px;
+    $section-spacing-mobile-large: 50px;
     $section-spacing-mobile-medium: 20px;
     $section-spacing-mobile-small: 10px;
 
@@ -379,6 +379,13 @@ html{
         }
      }
 
+
+    .primary__button{
+      padding: 10px 60px;
+      background-color: inherit;
+      border: 1px solid $black;
+      color: $black;
+    }
   /*================ Utilities =============================*/
 
       .align-center {
@@ -670,13 +677,6 @@ html{
 
     }
 
-   .home-cta__button{
-     padding: 10px 60px;
-     background-color: inherit;
-     border: 1px solid $black;
-     color: $black;
-   }
-
    .home-cta__text{
          p{
            text-transform: initial;
@@ -704,11 +704,31 @@ html{
          padding: 20px;
          max-width: 100%;
       }
-
       .home-cta__text{
             p{
               font-size: $font-size-title-small;
             }
      }
-
    }
+
+  /*================  home blog =============================*/
+
+      .home-blog-container{
+          width: 90%;
+          max-width: 1300px;
+          margin: 0 auto;
+      }
+
+      .home-blog__title{
+          text-transform: initial;
+      }
+      .home-blog__text{
+          max-width:500px;
+          margin-bottom: 30px;
+      }
+      @media #{$pocket}{
+         .home-blog__content{
+           text-align: center;
+           margin-top: 30px;
+         }
+     }

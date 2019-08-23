@@ -1,0 +1,46 @@
+{% include 'home-blog' %}
+
+{% schema %}
+{
+  "name": "Home Blog",
+  "class": "section-margin-large", 
+  "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background image"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "subtitle"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "content"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Text button",
+          "default": "Je me lance!"
+        }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Homepage blog"
+      },
+      "category": {
+        "en": "Homepage"
+      }
+    }
+  ]
+}
+{% endschema %}
