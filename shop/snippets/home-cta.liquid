@@ -1,0 +1,11 @@
+<section id="section--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="home-cta">
+     <div class="home-cta-container">
+           {% include 'image' with img : section.settings.image, class: 'full-width home-cta__image desktop-only' %}
+           {% include 'image' with img : section.settings.image-mobile, class: 'full-width home-cta__image mobile-only' %}
+           <div class="home-cta__content">
+               <h3 class="dear-type home-cta__subtitle">{{ section.settings.subtitle }}</h3>
+               <h2 class="medium home-cta__text">{{ section.settings.content }}</h2>
+               <button class="home-cta__button" type="button" name="button">{{ section.settings.button_text }}</button>
+           </div>
+    </div>
+</section>

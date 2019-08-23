@@ -314,6 +314,7 @@ html{
     $portable:         "screen and (max-width: 1024px)";
     $desk:             "screen and (min-width: 1025px)";
     $widescreen:       "screen and (min-width: 1160px)";
+    $superwide:        "screen and (min-width: 1280px)";
     $retina:           "screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx)";
 
 
@@ -332,9 +333,11 @@ html{
   /*================ custom font sizes ======================*/
 
     $font-size-title: 18px;
+    $font-size-small: 8px;
+
     $font-size-title-large: 1.7em;
-    $font-size-title-medium: 13px;
-    $font-size-title-small: 8px;
+    $font-size-title-medium: 1.5em;
+    $font-size-title-small: 1.3em;
 
   /*================ spacing =============================*/
 
@@ -480,7 +483,7 @@ html{
 
     @media #{$thumb}{
       .home-image__text{
-           font-size: $font-size-title-small;
+           font-size: $font-size-small;
       }
 
       .home-picto {
@@ -646,6 +649,66 @@ html{
            margin-top: 30px;
        }
        .featured-product_image-box-seoul{
-         text-align: center;
+          text-align: center;
        }
+   }
+
+
+   /*================  home cta =============================*/
+
+   .home-cta-container{
+      width: 100%;
+      position: relative;
+   }
+    .home-cta__content{
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+      max-width: 700px;
+
+    }
+
+   .home-cta__button{
+     padding: 10px 60px;
+     background-color: inherit;
+     border: 1px solid $black;
+     color: $black;
+   }
+
+   .home-cta__text{
+         p{
+           text-transform: initial;
+           color: $black;
+           font-size: $font-size-title-medium;
+         }
+   }
+
+   @media #{$superwide}{
+       .home-cta__content{
+          left: 10%;
+       }
+       .home-cta__text{
+             p{
+               font-size: $font-size-title-large;
+             }
+      }
+   }
+
+   @media #{$pocket}{
+      .home-cta__content{
+         top: 50%;
+         left: 0;
+         transform: translate(0, -50%);
+         padding: 20px;
+         max-width: 100%;
+      }
+
+      .home-cta__text{
+            p{
+              font-size: $font-size-title-small;
+            }
+     }
+
    }

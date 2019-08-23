@@ -1,0 +1,46 @@
+{% include 'home-cta' %}
+
+{% schema %}
+{
+  "name": "Home call 2 action",
+  "class": "section-margin-medium",
+  "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-mobile",
+          "label": "Background image mobile"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "subtitle"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "content"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Text button",
+          "default": "Je me lance!"
+        }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Homepage call 2 action"
+      },
+      "category": {
+        "en": "Homepage"
+      }
+    }
+  ]
+}
+{% endschema %}
