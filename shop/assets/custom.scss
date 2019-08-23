@@ -328,11 +328,13 @@ html{
     $pink: #ffdce4;
     $blue: #1b3063;
     $red: red;
+    $transparent: transparent;
 
 
   /*================ custom font sizes ======================*/
 
     $font-size-title: 18px;
+    $font-size-medium: 13px;
     $font-size-small: 8px;
 
     $font-size-title-large: 1.7em;
@@ -764,3 +766,64 @@ html{
           }
       }
   }
+
+/*======================================================*/
+/*================  FOOTER =============================*/
+/*======================================================*/
+
+/*================  pre FOOTER =============================*/
+  .footer-header{
+    background-color: $blue;
+    padding: 20px;
+  }
+
+  .footer-header__flex{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+
+  .footer-header__title{
+    text-transform: inherit;
+    margin: 0;
+    color: $white;
+  }
+  .footer-header__subtitle{
+    color: $white;
+  }
+
+  .footer-header__picto{
+    width: 70px;
+    margin-right: 10px;
+  }
+
+  @media #{$thumb}{
+    .footer-header__flex{
+       justify-content: flex-start;
+    }
+  }
+
+/*================  FOOTER =============================*/
+
+.footer{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 40px;
+}
+
+  .footer__title{
+      width: fit-content;
+      background-image: linear-gradient(to top, $pink 50%, $transparent 50%);
+      padding: 5px;
+      margin: 0;
+  }
+
+.footer__text{
+  p{
+    font-size: $font-size-medium;
+  }
+}
+
+
+  /*================  post FOOTER =============================*/
