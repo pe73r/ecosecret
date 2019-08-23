@@ -1,0 +1,84 @@
+<style>
+      #section--{{ section.id }} .home-insta__container{
+          background-size: contain;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-image: url("{{ section.settings.image | img_url: 'master' }}");
+       }
+      @media screen and (max-width: 800px) {
+          #section--{{ section.id }} .home-insta__container{
+               background-image: none;
+           }
+      }
+     //comment//
+</style>
+<section id="section--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="home-instagram">
+      <div class="align-center">
+         <h2 class="dear-type">{{ section.settings.title }}</h2>
+         <a href="{{ section.settings.url }}"></a><h3 class="medium text-initial">{{ section.settings.subtitle }}</h3></a>
+       </div>
+       <div class="home-insta__container">
+           	<div class="home-insta__images" id="instafeed"></div>
+        </div>
+</section>
+<script type="text/javascript">
+    var userFeed = new Instafeed({
+        get: 'user',
+        limit: 4,
+        resolution : "standard_resolution",
+        userId: '{{ section.settings.insta_id }}',
+        accessToken: '{{ section.settings.insta_token }}',
+
+    });
+    userFeed.run();
+</script>
+
+{% schema %}
+{
+  "name": "Instagram",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "image background"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "subtitle"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "link"
+    },
+    {
+      "type": "text",
+      "id": "insta_id",
+      "label": "instagram id",
+      "default": "5998958581"
+    },
+    {
+      "type": "text",
+      "id": "insta_token",
+      "label": "instagram token",
+      "default": "5998958581.1677ed0.ec89f1442e1546a5b232bf19707b7213"
+    }
+  ],
+  "presets": [
+    {
+      "name": {
+        "en": "Homepage Instafeed"
+      },
+      "category": {
+        "en": "Homepage"
+      }
+    }
+  ]
+}
+{% endschema %}

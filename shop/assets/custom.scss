@@ -416,6 +416,10 @@ html{
         transform: translate(-50%, -5%);
       }
 
+      .text-initial{
+          text-transform: initial;
+      }
+
       .desktop-only{
         display: block;
       }
@@ -719,9 +723,7 @@ html{
           margin: 0 auto;
       }
 
-      .home-blog__title{
-          text-transform: initial;
-      }
+
       .home-blog__text{
           max-width:500px;
           margin-bottom: 30px;
@@ -732,3 +734,33 @@ html{
            margin-top: 30px;
          }
      }
+
+/*================  home instafeed =============================*/
+
+    .home-insta__images{
+      display: flex;
+      justify-content: space-around;
+      max-width: 80%;
+      margin: 50px auto;
+      text-align: center;
+          img{
+               width: 90%;
+          }
+    }
+
+    @media #{$pocket}{
+       .home-insta__images{
+         flex-direction: column;
+           img{
+                width: 60%;
+           }
+       }
+   }
+
+   @media #{$thumb}{
+      .home-insta__images{
+          img{
+               width: 80%;
+          }
+      }
+  }
