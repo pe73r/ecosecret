@@ -409,6 +409,7 @@ $input-group-height-small: 42px;
 $color-facebook: #3b5998;
 $color-twitter: #00aced;
 $color-pinterest: #cb2027;
+$color-icons-ecosecret: #1b3063;
 
 /*================ Sizing Variables ================*/
 $width-site: 1200px;
@@ -1697,10 +1698,13 @@ symbol {
 .social-icons .icon {
   width: 23px;
   height: 23px;
+  fill: $color-icons-ecosecret;
+
+
 
   @include media-query($medium-up) {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
   }
 
   &.icon--wide {
@@ -6094,7 +6098,7 @@ $toolbar-height-small: 46px;
 }
 
 .site-footer {
-  
+
   padding: $footer-spacing-large 0 $section-spacing 0;
 
   @include media-query($medium-up) {
@@ -6241,7 +6245,7 @@ $toolbar-height-small: 46px;
 }
 
 .site-footer__social-icons li {
-  padding: 0 $footer-spacing-small;
+  padding: $footer-spacing-extra-small;
 
   @include media-query($medium-up) {
     &:first-of-type {
