@@ -808,7 +808,7 @@ html{
 /*================  FOOTER =============================*/
 
 .footer-ecosecret{
-  margin-bottom: 40px;
+  padding-bottom: 50px;
 }
 .footer-ecosecret__container{
     width: 90%;
@@ -880,4 +880,15 @@ html{
     font-weight: bold;
 
   }
-  
+  @media #{$pocket}{
+      .footer-ecosecret__container {
+        padding: 20px 0;
+      }
+      .terms-conditions__menu{
+        flex-direction: column;
+        text-align: center;
+        li{
+           margin-bottom: 10px;
+        }
+      }
+  }
