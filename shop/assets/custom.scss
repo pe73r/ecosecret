@@ -383,6 +383,7 @@ html{
         }
      }
 
+  /*================ buttons and titles =============================*/
 
     .primary__button{
       padding: 10px 60px;
@@ -390,6 +391,20 @@ html{
       border: 1px solid $black;
       color: $black;
     }
+
+    .ecosecret__title-container {
+        width: max-content;
+        margin: 10px auto;
+    }
+
+    .ecosecret__title{
+        width: fit-content;
+        background-image: linear-gradient(to top, $pink 40%, $transparent 40%);
+        padding: 5px;
+        font-size: $font-size-title-large;
+        margin: 0;
+    }
+
   /*================ Utilities =============================*/
 
       .align-center {
@@ -818,7 +833,6 @@ html{
 
  }
  .footer-ecosecret p,
- .footer-ecosecret h4,
  .footer-ecosecret small,
  .footer-ecosecret li a {
      font-size: $footer-font-size;
@@ -826,8 +840,10 @@ html{
 
 .footer-ecosecret__title{
       width: fit-content;
-      background-image: linear-gradient(to top, $pink 50%, $transparent 50%);
+      background-image: linear-gradient(to top, $pink 40%, $transparent 40%);
       padding: 5px;
+      font-size: $font-size-title;
+      font-weight: 600;
   }
 
 .form-footer__ecosecret{
@@ -892,3 +908,53 @@ html{
         }
       }
   }
+  /*======================================================*/
+  /*================  PAGE HISTORY =======================*/
+  /*======================================================*/
+
+    .history-header__title{
+        width: max-content;
+        margin: 50px auto;
+    }
+
+     .history-header__title{
+        text-align: center;
+        background-image: linear-gradient(to top, $pink 40%, $white 40%);
+        padding: 5px;
+    }
+
+  .history-header__container{
+    width: 100%;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .history-header__content{
+     width: 55%;
+     margin: 0 auto;
+     background-color: $white;
+     text-align: center;
+     margin: 60px auto;
+     padding: 40px;
+
+  }
+
+  .history-header__text{
+    max-width: 600px;
+    margin: 0 auto;
+      p{
+        color: $black;
+      }
+  }
+
+@media #{$pocket}{
+    .history-header__content {
+        width: 90%;
+        padding: 30px;
+    }
+}
