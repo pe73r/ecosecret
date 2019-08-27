@@ -1,9 +1,5 @@
 <style>
   {% for block in section.blocks %}
-      #block--{{ block.id }} .ingredients__title{
-          color: {{ block.settings.color }}
-       }
-
        #block--{{ block.id }} .ingredients__content{
            text-align: {{ block.settings.text-align }}
         }
@@ -33,13 +29,13 @@
 
 {% schema %}
 {
-  "name": "Ingredients France",
+  "name": "Ingredients Korea",
   "settings": [
   ],
   "blocks": [
           {
             "type": "ingredients",
-            "name": "ingredient-france",
+            "name": "ingredient-korea",
             "settings": [
             {
              "type":      "checkbox",
@@ -57,11 +53,6 @@
              "id": "title",
              "label": "title",
              "default": "title"
-          },
-          {
-            "type": "color",
-            "id": "color",
-            "label": "title color"
           },
           {
             "type": "richtext",
