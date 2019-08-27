@@ -1,0 +1,95 @@
+<style>
+  {% for block in section.blocks %}
+      #block--{{ block.id }} .ingredients__title{
+          color: {{ block.settings.color }}
+       }
+
+       #block--{{ block.id }} .ingredients__content{
+           text-align: {{ block.settings.text-align }}
+        }
+  {% endfor %}
+</style>
+<section id="section--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="images-home">
+    <div class="ingredients-container">
+        {% for block in section.blocks %}
+             <div id="block--{{ block.id }}" data-block-id="{{ block.id }}" data-block-type="images-home">
+                  <div class="grid {% if block.settings.direction %} grid--rev {% endif %} grid--middle">
+                          <div class="1/2--lap-and-up grid__cell">
+                               <div class="image">
+                                   {% include 'image' with img : block.settings.image, class: 'full-width' %}
+                               </div>
+                          </div>
+                          <div class="1/2--lap-and-up grid__cell">
+                             <div class="ingredients__content">
+                                <h2 class="dear-type ingredients__title">{{ block.settings.title }}</h2>
+                                <div class="medium ingredients__text">{{ block.settings.content }}</div>
+                             </div>
+                          </div>
+                    </div>
+              </div>
+          {% endfor %}
+     </div>
+</section>
+
+{% schema %}
+{
+  "name": "Ingredients France",
+  "settings": [
+  ],
+  "blocks": [
+          {
+            "type": "ingredients",
+            "name": "ingredient-france",
+            "settings": [
+            {
+             "type":      "checkbox",
+             "id":        "direction",
+             "label":     "inverse block direction",
+             "default":   false
+           },
+           {
+             "type": "image_picker",
+             "id": "image",
+             "label": "image"
+           },
+           {
+             "type": "text",
+             "id": "title",
+             "label": "title",
+             "default": "title"
+          },
+          {
+            "type": "color",
+            "id": "color",
+            "label": "title color"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "content"
+          },
+          {
+           "type":      "select",
+           "id":        "text-align",
+           "label":     "Text align",
+           "options": [
+             {
+               "value": "left",
+               "label": "Left"
+             },
+             {
+               "value": "center",
+               "label": "Center"
+             },
+             {
+               "value": "right",
+               "label": "Right"
+             }
+           ],
+           "default":   "left"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

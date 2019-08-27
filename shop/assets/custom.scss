@@ -925,7 +925,6 @@ html{
 
   .history-header__container{
     width: 100%;
-    min-height: 500px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -957,4 +956,42 @@ html{
         width: 90%;
         padding: 30px;
     }
+}
+/*======================================================*/
+/*================  PAGE ingredients ===================*/
+/*======================================================*/
+
+.ingredients-image-container{
+    width: 80%;
+    margin: 30px auto;
+    max-width: 1100px;
+}
+
+.ingredients-container{
+    width: 90%;
+    margin: 30px auto;
+    max-width: 1000px;
+}
+
+.ingredients__title{
+    font-size:  $font-size-title-large;
+}
+
+.ingredients-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    width: 90%;
+    max-width:600px;
+    padding: 5px;
+}
+
+.ingredients-button__picto{
+    width: 50px;
+    margin-right: 10px;
+}
+
+.ingredients-button__title{
+   font-size:  $font-size-title;
 }
