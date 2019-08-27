@@ -1,0 +1,75 @@
+<style>
+   #section--{{ section.id }} .history-lab__container{
+         background-color: {{ section.settings.color }}
+    }
+</style>
+<section id="section--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="history-lab">
+     <div class="history-lab__container">
+           <div class="full__container ">
+                <div class="grid">
+                      <div class="1/4--lap-and-up grid__cell">
+                        <div class="history-lab__image-left">
+                              {% include 'image' with img : section.settings.image-left, class: 'full-width' %}
+                        </div>
+                      </div>
+                      <div class="2/4--lap-and-up grid__cell">
+                          <div class="history-lab__content">
+                               <h2 class="dear-type history-lab__title">{{ section.settings.title }}</h2>
+                               <div class="medium history-lab__text">{{ section.settings.content }}</div>
+                               <h2 class="dear-type history-lab__title">{{ section.settings.title-bottom }}</h2>
+                               <div class="medium">{{ section.settings.content-bottom }}</div>
+                          </div>
+                      </div>
+                      <div class="1/4--lap-and-up grid__cell line-height">
+                            <div class="history-lab__image-right">
+                                  {% include 'image' with img : section.settings.image-right, class: 'full-width' %}
+                            </div>
+                      </div>
+                </div>
+            </div>
+      </div>
+</section>
+
+{% schema %}
+{
+  "name": "history laboratory map",
+  "settings": [
+        {
+          "type": "color",
+          "id": "color",
+          "label": "background color",
+          "default": "#ebf1f3"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "text"
+        },
+        {
+          "type": "text",
+          "id": "title-bottom",
+          "label": "title bottom"
+        },
+        {
+          "type": "richtext",
+          "id": "content-bottom",
+          "label": "text bottom"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-left",
+          "label": "image left"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-right",
+          "label": "image right"
+        }
+  ]
+}
+{% endschema %}

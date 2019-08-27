@@ -6,7 +6,7 @@
   {% endfor %}
 </style>
 <section id="section--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="images-home">
-    <div class="ingredients-container">
+    <div class="large__container">
         {% for block in section.blocks %}
              <div id="block--{{ block.id }}" data-block-id="{{ block.id }}" data-block-type="images-home">
                   <div class="grid {% if block.settings.direction %} grid--rev {% endif %} grid--middle">

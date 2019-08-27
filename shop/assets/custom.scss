@@ -343,6 +343,33 @@ html{
 
     $footer-font-size: 14px;
 
+  /*================ containers =============================*/
+
+    .full__container{
+          width: 100%;
+          max-width: 1500px;
+          margin: 0 auto;
+      }
+
+    .large__container{
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .medium__container{
+        width: 80%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .small__container{
+        width: 70%;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+
   /*================ spacing =============================*/
 
     $section-spacing-xlarge: 70px;
@@ -421,6 +448,10 @@ html{
         width: 100%;
       }
 
+      .inherit{
+        width: inherit;
+      }
+
       .position-absolute-center{
         position: absolute;
         top:50%;
@@ -447,6 +478,10 @@ html{
         display: none;
       }
 
+      .line-height{
+        line-height: 0;
+      }
+
      .margin-cero{
         margin: 0;
      }
@@ -465,6 +500,12 @@ html{
 
           .mobile-only{
             display: block;
+          }
+          .align-center-mobile {
+            text-align: center;
+          }
+          .align-justify-mobile {
+            text-align: justify;
           }
       }
 
@@ -957,6 +998,39 @@ html{
         padding: 30px;
     }
 }
+
+/*================  setion addicts ===================*/
+
+.history-addicts__text{
+   margin-bottom: 30px;
+}
+
+.history-lab__container{
+      padding: 30px 0;
+}
+
+.history-lab__content{
+   margin: 50px auto;
+   width: 80%;
+}
+
+.history-lab__title{
+  font-size:  $font-size-title-medium;
+}
+
+.history-lab__text{
+   margin-bottom: 40px;
+}
+
+.history-lab__image-left{
+  margin-top: 50px;
+}
+
+@media #{$pocket}{
+    .history-lab__image-left{
+      margin-top: 0;
+    }
+}
 /*======================================================*/
 /*================  PAGE ingredients ===================*/
 /*======================================================*/
@@ -965,6 +1039,7 @@ html{
     width: 80%;
     margin: 30px auto;
     max-width: 1000px;
+    text-align: center;
 }
 
 .ingredients-container{
@@ -985,6 +1060,7 @@ html{
     width: 90%;
     max-width:600px;
     padding: 5px;
+    cursor: pointer;
 }
 
 .ingredients-button__picto{

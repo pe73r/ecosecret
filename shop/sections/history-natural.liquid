@@ -1,0 +1,40 @@
+<section id="section--{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="history-natural">
+     <div class="large__container section-margin-large">
+            <div class="grid grid--middle">
+                    <div class="1/2--lap-and-up grid__cell line-height">
+                        <div>
+                                {% include 'image' with img : section.settings.image, class: 'full-width' %}
+                        </div>
+                    </div>
+                    <div class="1/2--lap-and-up grid__cell">
+                        <div class="history-natural__content align-center-mobile">
+                             <h2 class="dear-type history-natural__title">{{ section.settings.title }}</h2>
+                             <div class="medium history-natural__text align-justify-mobile">{{ section.settings.content }}</div>
+                        </div>
+                    </div>
+            </div>
+      </div>
+</section>
+
+{% schema %}
+{
+  "name": "history natural beauty",
+  "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "text"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "image"
+        }
+  ]
+}
+{% endschema %}
