@@ -1109,10 +1109,9 @@ html{
       display: none;
     }
 
-    .ecosecret__dropdown{
+    .header-ecosecret__selling-points{
       position: absolute;
       left: 10%;
-      cursor: pointer;
      }
 
     .ecosecret__login{
@@ -1169,4 +1168,55 @@ html{
     .ecosecret__search{
       width: 30px;
       margin-right: 15px;
+    }
+
+
+
+/*================  HEADER- mobile ===================*/
+
+    .header-mobile__container{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        align-items: center;
+        position: relative;
+        background-color: $blue;
+    }
+
+    .header-mobile__logo{
+        width: 200px;
+    }
+
+    .header-mobile__dropdown{
+      position: absolute;
+      left: 10%;
+      cursor: pointer;
+     }
+
+    .header-mobile__hamburguer{
+       width: 30px;
+       height: 30px;
+       cursor: pointer;
+         svg{
+           fill: $white;
+         }
+    }
+
+    .header-mobile__menu{
+       background-color:$blue;
+       width: 100%;
+       padding-bottom: 20px;
+       display: none;
+       text-align: center;
+
+       ul li{
+         margin-bottom: 10px;
+             a{
+               color: $white;
+               font-size:  $font-size-title;
+               &:hover {
+                  color: $red-ecosecret;
+               }
+            }
+       }
     }
