@@ -315,6 +315,7 @@ html{
     $desk:             "screen and (min-width: 1025px)";
     $widescreen:       "screen and (min-width: 1160px)";
     $superwide:        "screen and (min-width: 1280px)";
+    $wide:             "screen and (max-width: 1280px)";
     $retina:           "screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx)";
 
 
@@ -758,6 +759,18 @@ html{
                font-size: $font-size-title-large;
              }
       }
+   }
+
+   @media #{$wide}{
+          .home-cta__content{
+            max-width: 600px;
+          }
+
+         .home-cta__text{
+               p{
+                 font-size: $font-size-title-small;
+               }
+        }
    }
 
    @media #{$pocket}{
