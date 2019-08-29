@@ -339,6 +339,7 @@ html{
   /*================ custom font sizes ======================*/
 
     $font-size-title: 18px;
+    $font-size-menu: 16px;
     $font-size-medium: 13px;
     $font-size-small: 8px;
 
@@ -1154,6 +1155,7 @@ html{
        }
 
        li a{
+           font-size: $font-size-menu;
            color: $white;
            &:hover {
               color: $red-ecosecret;
@@ -1170,9 +1172,17 @@ html{
       margin-right: 15px;
     }
 
+    @media #{$portable}{
+          .ecosecret__nav{
+               ul li a{
+                   font-size: $font-size-medium;
+               }
+          }
+    }
 
 
 /*================  HEADER- mobile ===================*/
+
 
     .header-mobile__container{
         display: flex;
@@ -1180,7 +1190,7 @@ html{
         padding: 20px;
         align-items: center;
         position: relative;
-        background-color: $blue;
+
     }
 
     .header-mobile__logo{
@@ -1193,14 +1203,22 @@ html{
       cursor: pointer;
      }
 
-    .header-mobile__hamburguer{
-       width: 30px;
-       height: 30px;
-       cursor: pointer;
-         svg{
-           fill: $white;
-         }
-    }
+     .header-mobile__hamburguer{
+        width: 40px;
+        cursor: pointer;
+          svg{
+            fill: $white;
+          }
+     }
+     .header-mobile__login{
+         position: absolute;
+         right: 7%;
+         top: 25%;
+      }
+
+      .header-mobile__shopping_bag{
+        width: 50px;
+      }
 
     .header-mobile__menu{
        background-color:$blue;
@@ -1219,4 +1237,16 @@ html{
                }
             }
        }
+    }
+
+    @media #{$thumb}{
+        .header-mobile__logo{
+            width: 150px;
+        }
+        .header-mobile__shopping_bag{
+            width: 40px;
+        }
+        .header-mobile__hamburguer {
+            width: 30px;
+        }
     }
