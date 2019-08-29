@@ -454,6 +454,14 @@ html{
         width: 100%;
       }
 
+      .float-left{
+        float: left;
+      }
+
+      .float-right{
+        float: right;
+      }
+
       .inherit{
         width: inherit;
       }
@@ -1138,31 +1146,54 @@ html{
         }
    }
 
+   .ecosecret__nav{
+
+
+        li a{
+            font-size: $font-size-menu;
+            color: $white;
+            &:hover {
+               color: $red-ecosecret;
+            }
+        }
+   }
+
    .ecosecret-menu-image{
-     width: 20%;
+     width: 15%;
    }
    .ecosecret-menu{
-     width: 60%;
+     width: 70%;
    }
 
-  .ecosecret__nav{
-     ul{
-       display: flex;
-       justify-content: space-around;
+   .header__menu-items{
+     display: flex;
+     justify-content: space-around;
+   }
 
-       li:not(:last-child) {
-         margin-right: 15px;
-       }
+  .header__submenu-items {
+        display: none;
+        position: absolute;
+        left: -30px;
+        background-color: $blue;
+        padding: 10px 30px;
+        z-index: 99;
+        min-width: max-content;
+        text-align: center;
+        li {
+            z-index: 2;
+            position: relative;
+          }
+    }
 
-       li a{
-           font-size: $font-size-menu;
-           color: $white;
+   .header__menu-item {
+     position: relative;
+     display: inline-block;
            &:hover {
-              color: $red-ecosecret;
+               .header__submenu-items  {
+                 display: block;
+               }
            }
-       }
-     }
-  }
+    }
 
     .ecosecret__shopping_bag,
     .ecosecret__user,
@@ -1183,6 +1214,11 @@ html{
 
 /*================  HEADER- mobile ===================*/
 
+    .header-ecosecret__mobile{
+          background-color: $blue;
+          background-size: cover;
+          background-position: center;
+     }
 
     .header-mobile__container{
         display: flex;
@@ -1190,7 +1226,6 @@ html{
         padding: 20px;
         align-items: center;
         position: relative;
-
     }
 
     .header-mobile__logo{
