@@ -329,10 +329,10 @@ html{
     $grey:grey;
     $lightgrey:lightgrey;
     $lightred: #f46156;
-    $pink: #ffdce4;
-    $blue: #1b3063;
+    $pink: #ffdee4;
+    $blue: #1C3160;
     $red: red;
-    $red-ecosecret: #f46156;
+    $red-ecosecret: #E56A5D;
     $transparent: transparent;
 
 
@@ -482,6 +482,14 @@ html{
 
       .text-initial{
           text-transform: initial;
+      }
+
+      .block{
+        display: block;
+      }
+
+      .none{
+        display: none;
       }
 
       .desktop-only{
@@ -641,6 +649,7 @@ html{
 
    /*================  featured-product-paris =============================*/
 
+
     .featured-product-container{
        width: 90%;
        max-width: 1300px;
@@ -667,6 +676,11 @@ html{
    .featured-product_image{
      width: 250px;
      margin: 0 auto;
+   }
+
+   .featured-product__button{
+     padding: 10px 60px;
+     background-color: #fff;
    }
 
    .featured-product__left{
@@ -1147,8 +1161,6 @@ html{
    }
 
    .ecosecret__nav{
-
-
         li a{
             font-size: $font-size-menu;
             color: $white;
@@ -1212,7 +1224,7 @@ html{
     }
 
 
-/*================  HEADER- mobile ===================*/
+/*================  HEADER-mobile ===================*/
 
     .header-ecosecret__mobile{
           background-color: $blue;
@@ -1285,3 +1297,21 @@ html{
             width: 30px;
         }
     }
+
+    /*======================================================*/
+    /*================  BLOG  ==============================*/
+    /*======================================================*/
+
+    .blog-ecosecret-container{
+       width: 90%;
+       margin: 0 auto;
+       max-width: 1000px;
+    }
+
+    .blog-ecosecret__title{
+      font-size:  $font-size-title-large;
+    }
+
+   .article-full-image{
+     margin: 30px auto;
+   }
